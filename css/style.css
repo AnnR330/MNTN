@@ -1,0 +1,149 @@
+:root {
+    --bg: #0B1D26;
+    --accent: #FBD784;
+
+    box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 22px;
+    background-color: var(--bg);
+    color: #fff;
+    margin: 0;
+}
+
+a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.headline {
+    text-transform: uppercase;
+    color: var(--accent);
+    letter-spacing: 6px;
+    font-weight: 700;
+    padding-left: 96px;
+    position: relative;
+}
+
+.headline::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 72px;
+    height: 2px;
+    background-color: var(--accent);
+}
+
+.title {
+    font-family: 'Castoro', serif;
+    font-size: 60px;
+    line-height: 77px;
+}
+
+.header {
+    background-image: linear-gradient(330.24deg, rgba(11, 29, 38, 0) 31.06%, #0B1D26 108.93%), url(../img/background.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+}
+
+.header__top {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 80px;
+    padding-top: 64px;
+}
+
+.header__logo {
+    font-family: 'Castoro', serif;
+}
+
+.header__menu {
+    flex-basis: 250px;
+}
+
+.header__menu-list {
+    display: flex;
+    justify-content: space-between;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.header__account {
+    padding-left: 32px;
+    position: relative;
+}
+
+.header__account::before {
+    content: "";
+    position: absolute;
+    top: -2px;
+    left: 0;
+    height: 24px;
+    width: 24px;
+    background-image: url(../img/account.svg);
+}
+
+.header__slider {
+    display: flex;
+    justify-content: space-between;
+    padding: 190px 80px;
+}
+
+.header__contacts {
+    padding-top: 120px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+}
+
+.header__contacts-text {
+    position: absolute;
+    top: 45px;
+    transform: rotate(90deg);
+    white-space: nowrap;
+    width: 24px;
+}
+.header__contacts-link{
+    padding-bottom: 20px;
+}
+
+.header__headline {
+    padding-left: 104px;
+}
+
+.header__title {
+    text-transform: capitalize;
+    max-width: 800px;
+    padding: 32px 0;
+}
+
+.header__scroll{
+    position: relative;
+    text-transform: lowercase;
+    padding-right: 16px;
+}
+
+.header__scroll::after{
+    content: "";
+    position: absolute;
+    width: 16px;
+    height: 24px;
+    top: 0;
+    right: -16px;
+    background-image: url(../img/arrow-bottom.svg);
+}
