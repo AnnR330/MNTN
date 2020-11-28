@@ -21,9 +21,28 @@ body {
     margin: 0;
 }
 
+ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
 a {
     color: #fff;
     text-decoration: none;
+}
+
+.container {
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.logo {
+    font-family: 'Castoro', serif;
+    font-size: 32px;
+    line-height: 38px;
+    letter-spacing: 0.01em;
+    text-transform: capitalize;
 }
 
 .headline {
@@ -47,28 +66,23 @@ a {
 
 .title {
     font-family: 'Castoro', serif;
-    font-size: 60px;
+    font-size: 65px;
     line-height: 77px;
 }
 
-.header {
-    background-image: linear-gradient(330.24deg, rgba(11, 29, 38, 0) 31.06%, #0B1D26 108.93%), url(../img/background.jpg);
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    min-height: 100vh;
-}
 
 .header__top {
     display: flex;
     justify-content: space-between;
     margin: 0 80px;
     padding-top: 64px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 10;
 }
 
-.header__logo {
-    font-family: 'Castoro', serif;
-}
 
 .header__menu {
     flex-basis: 250px;
@@ -77,14 +91,12 @@ a {
 .header__menu-list {
     display: flex;
     justify-content: space-between;
-    margin: 0;
-    padding: 0;
-    list-style: none;
 }
 
 .header__account {
     padding-left: 32px;
     position: relative;
+    cursor: pointer;
 }
 
 .header__account::before {
@@ -97,10 +109,25 @@ a {
     background-image: url(../img/account.svg);
 }
 
+.header__popup {
+    display: none;
+}
+
 .header__slider {
+    position: relative;
+    margin-bottom: 100px;
+}
+
+.header__slider-item {
     display: flex;
     justify-content: space-between;
+    background-image: linear-gradient(330.24deg, rgba(11, 29, 38, 0) 31.06%, #0B1D26 108.93%), url(../img/slider-item1.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    min-height: 100vh;
     padding: 190px 80px;
+
 }
 
 .header__contacts {
@@ -113,12 +140,13 @@ a {
 
 .header__contacts-text {
     position: absolute;
-    top: 45px;
+    top: 80px;
     transform: rotate(90deg);
     white-space: nowrap;
     width: 24px;
 }
-.header__contacts-link{
+
+.header__contacts-link {
     padding-bottom: 20px;
 }
 
@@ -132,13 +160,13 @@ a {
     padding: 32px 0;
 }
 
-.header__scroll{
+.header__scroll {
     position: relative;
     text-transform: lowercase;
     padding-right: 16px;
 }
 
-.header__scroll::after{
+.header__scroll::after {
     content: "";
     position: absolute;
     width: 16px;
@@ -146,4 +174,105 @@ a {
     top: 0;
     right: -16px;
     background-image: url(../img/arrow-bottom.svg);
+}
+
+
+.box {
+    display: flex;
+    padding: 100px 0;
+}
+
+.box__content {
+    padding: 140px;
+    position: relative;
+}
+
+.box__content--side-right {
+    padding-left: 264px;
+    padding-right: 0;
+}
+
+.box__number {
+    font-family: 'Castoro', serif;
+    font-size: 240px;
+    opacity: 0.1;
+    position: absolute;
+    top: 140px;
+    left: 8px;
+}
+
+.box__number--side-right {
+    left: 130px;
+}
+
+.box__title {
+    font-size: 56px;
+    line-height: 60px;
+    padding: 27px 0;
+}
+
+.box__text {
+    line-height: 32px;
+    padding-bottom: 27px;
+}
+
+.box__link {
+    color: var(--accent);
+    text-transform: lowercase;
+    padding-right: 40px;
+    position: relative;
+}
+
+.box__link::after {
+    position: absolute;
+    top: 4px;
+    right: 0;
+    content: "";
+    width: 24px;
+    height: 16px;
+    background-image: url("../img/arrow-right.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.footer {
+    display: flex;
+    justify-content: space-between;
+    padding: 100px 0 120px;
+}
+
+.footer__box {
+    flex: 3;
+}
+
+.footer__box--list {
+    flex: 2;
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer__text {
+    max-width: 320px;
+    line-height: 32px;
+    margin-bottom: 122px;
+}
+
+.footer__copy {
+    opacity: 0.5;
+}
+
+.footer__list {
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 32px;
+    color: var(--accent);
+    text-align: left;
+}
+
+.footer__links{
+    padding-top: 24px;
+}
+.footer__link {
+    font-weight: 400;
+    font-size: 18px;
 }
