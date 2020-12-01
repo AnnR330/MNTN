@@ -160,19 +160,24 @@
         <div class="popup__body">
             <div class="popup__content">
                 <button class="popup__close">x</button>
-                <form action="" class="popup__form form">
-                    <label for="userName" class="form__label"><b>Username</b></label>
-                    <input type="text" class="form__input" placeholder="Enter Username" name="userName" required>
+                <form class="popup__form form" onsubmit="popupClose(); return false;">
+                    <div class="form__body">
+                        <label for="userName" class="form__label"><b>Username</b></label>
+                        <input type="text" class="form__input" placeholder="Enter Username" name="userName" required>
 
-                    <label for="psw" class="form__label"><b>Password</b></label>
-                    <input type="password" class="form__input" placeholder="Enter Password" name="psw" required>
+                        <label for="psw" class="form__label"><b>Password</b></label>
+                        <input type="password" class="form__input" placeholder="Enter Password" name="psw" required>
 
-                    <button type="submit" class="form__btn form__btn--submit">Login</button>
-                    <label>
-                        <input type="checkbox" checked="checked" name="remember" class="form__checkbox"> Remember me
-                    </label>
-                    <button type="button" class="form__btn form__btn--cancel">Cancel</button>
-                    <span class="form__link">Forgot <a href="#">password?</a></span>
+                        <button type="submit" class="form__btn form__btn--submit">Login</button>
+
+                        <label class="form__checkbox">
+                            <input type="checkbox" checked="checked" name="remember"> Remember me
+                        </label>
+                    </div>
+                    <div class="form__footer">
+                        <button type="button" class="form__btn form__btn--cancel">Cancel</button>
+                        <span class="form__link">Forgot <a href="#">password?</a></span>
+                    </div>
             </div>
             </form>
         </div>
