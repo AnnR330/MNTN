@@ -1,40 +1,46 @@
-// slider
-
 (function () {
+
     // Popup
 
-    const popupLink = document.querySelector('.header__popup-link');
-    const popupElem = document.querySelector('.popup');
-    const popupCloseBtn = document.querySelector('.popup__close');
-    const formBtn = document.querySelector('.form__btn--cancel');
+    const popupLink = document.querySelector(".header__popup-link")
+    const popupElem = document.querySelector(".popup")
+    const popupCloseBtn = document.querySelector(".popup__close")
+    const popupForm = document.querySelector(".popup__form")
+    const formBtn = document.querySelector(".form__btn--cancel")
 
     popupLink.addEventListener("click", function (e) {
-        popupOpen(popupElem);
-    });
+        popupOpen(popupElem)
+    })
 
-    popupCloseBtn.addEventListener('click', function (e) {
-        popupClose(popupCloseBtn.closest('.popup'));
-    });
+    popupCloseBtn.addEventListener("click", function (e) {
+        popupClose(popupCloseBtn.closest(".popup"))
+    })
 
-    formBtn.addEventListener('click', function (e) {
-        popupClose(formBtn.closest('.popup'));
-    });
+    popupForm.addEventListener("submit", function(e){
+        e.preventDefault()
+        popupClose(formBtn.closest(".popup"))
+    })
+
+    formBtn.addEventListener("click", function (e) {
+        popupClose(formBtn.closest(".popup"))
+    })
 
 
     function popupOpen(popupElem) {
-        popupElem.classList.add('open');
+        popupElem.classList.add("open")
         popupElem.addEventListener("click", function (e) {
-            if (!e.target.closest('.popup__content')) {
-                popupClose(e.target.closest('.popup'));
+            if (!e.target.closest(".popup__content")) {
+                popupClose(e.target.closest(".popup"))
             }
-        });
+        })
     }
 
     function popupClose() {
-        popupElem.classList.remove('open');
-        document.forms[0].reset();
+        popupElem.classList.remove("open")
+        popupForm.reset()
     }
 
+    // Slider
 
     const sliderWrapper = document.querySelector(".slider__wrapper")
     const sliderItems = document.querySelectorAll(".slider__item")
@@ -48,7 +54,7 @@
     let transform = 0
 
 
-    sliderItems.forEach((item, index) => {
+    sliderItems.forEach( item => {
         itemsArray.push({
             item: item,
             transform: 0
@@ -65,7 +71,7 @@
             currentItemPosition++
             transform -= step
 
-            if (currentItemPosition === (itemsArray.length - 1))
+            if (currentItemPosition === itemsArray.length - 1)
                 nextBtn.classList.remove("btn--show")
         }
 
@@ -103,10 +109,10 @@
 
     return {
         right: function () {
-            transformItem('right');
+            transformItem("right");
         },
         left: function () {
-            transformItem('left');
+            transformItem("left");
         }
     }
 

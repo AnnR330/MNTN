@@ -16,6 +16,11 @@
         <div class="header__top">
             <a href="#" class="logo header__logo">MNTN</a>
             <nav class="header__menu">
+
+                <input type="checkbox" class="header__menu-toogle" id="toogle">
+                <label for="toogle" class="header__menu-btn">
+                    <span></span>
+                </label>
                 <ul class="header__menu-list">
                     <li class="header__menu-item"><a href="#" class="header__menu-link">Equipment</a></li>
                     <li class="header__menu-item"><a href="#" class="header__menu-link">About us</a></li>
@@ -27,7 +32,14 @@
         <div class="slider">
             <div class="slider__wrapper">
                 <div class="slider__item">
-                    <img src="img/slider-item1.jpg" class="slider__img">
+                    <img class="slider__img"
+                         srcset="img/slider-item1-400.jpg 400w,
+                                img/slider-item1-800.jpg 800w,
+                                img/slider-item1-1200.jpg 1200w"
+                         sizes="(max-width: 320px) 100vw,
+                                (max-width: 800px) 100vw,
+                                100vw"       
+                         src="img/slider-item1-1200.jpg" >
                     <div class="slider__box">
                         <div class="slider__content">
                             <p class="headline slider__headline">
@@ -44,7 +56,14 @@
                 </div>
 
                 <div class="slider__item">
-                    <img src="img/slider-item2.jpg" class="slider__img">
+                    <img class="slider__img"
+                         srcset="img/slider-item2-400.jpg 400w,
+                                img/slider-item2-800.jpg 800w,
+                                img/slider-item2-1200.jpg 1200w"
+                         sizes="(max-width: 320px) 100vw,
+                                (max-width: 800px) 100vw,
+                                100vw"       
+                         src="img/slider-item2-1200.jpg" >
                     <div class="slider__box">
                         <div class="slider__content">
                             <p class="headline slider__headline">
@@ -61,7 +80,14 @@
                 </div>
 
                 <div class="slider__item">
-                    <img src="img/slider-item3.jpg" class="slider__img">
+                    <img class="slider__img"
+                         srcset="img/slider-item3-400.jpg 400w,
+                                img/slider-item3-800.jpg 800w,
+                                img/slider-item3-1200.jpg 1200w"
+                         sizes="(max-width: 320px) 100vw,
+                                (max-width: 800px) 100vw,
+                                100vw"       
+                         src="img/slider-item3-1200.jpg" >
                     <div class="slider__box">
                         <div class="slider__content">
                             <p class="headline slider__headline">
@@ -96,7 +122,7 @@
 
     <main class="main">
         <div class="container">
-            <div class="box">
+            <section class="box">
                 <div class="box__content">
                     <span class="box__number">01</span>
                     <p class="headline box__headline">GEt Started</p>
@@ -110,10 +136,24 @@
                     </p>
                     <a href="#" class="box__link">read more</a>
                 </div>
-                <img src="img/item1.jpg" alt="" class="box__img">
-            </div>
-            <div class="box">
-                <img src="img/item2.jpg" alt="" class="box__img">
+                <img class="box__img" 
+                     srcset="img/item1-300.jpg 300w,
+                            img/item1-400.jpg 400w, 
+                            img/item1-566.jpg 566w"
+                     sizes="(max-width: 800px) 300px,
+                            (max-width: 1200px) 400px,
+                            566px"      
+                     src="img/item1-566.jpg"/>
+            </section>
+            <section class="box">
+                <img class="box__img" 
+                     srcset="img/item2-300.jpg 300w,
+                            img/item2-400.jpg 400w, 
+                            img/item2-566.jpg 566w"
+                     sizes="(max-width: 800px) 300px,
+                            (max-width: 1200px) 400px,
+                            566px"      
+                     src="img/item2-566.jpg"/>
                 <div class="box__content box__content--side-right">
                     <span class="box__number box__number--side-right">02</span>
                     <p class="headline box__headline">Hiking Essentials</p>
@@ -127,8 +167,8 @@
                     </p>
                     <a href="#" class="box__link">read more</a>
                 </div>
-            </div>
-            <div class="box">
+            </section>
+            <section class="box">
                 <div class="box__content">
                     <span class="box__number">03</span>
                     <p class="headline box__headline">where you go is the key</p>
@@ -143,8 +183,15 @@
                     </p>
                     <a href="#" class="box__link">read more</a>
                 </div>
-                <img src="img/item3.jpg" alt="" class="box__img">
-            </div>
+                <img class="box__img" 
+                     srcset="img/item3-300.jpg 300w,
+                            img/item3-400.jpg 400w, 
+                            img/item3-566.jpg 566w"
+                     sizes="(max-width: 800px) 300px,
+                            (max-width: 1200px) 400px,
+                            566px"        
+                     src="img/item3-566.jpg">
+            </section>
         </div>
     </main>
 
@@ -153,9 +200,6 @@
             <a href="#" class="logo footer__logo">MNTN</a>
             <p class="footer__text">
                 Get out there & discover your next slope, mountain & destination!
-            </p>
-            <p class="footer__copy">
-                Copyright 2019 MNTN, Inc. Terms & Privacy
             </p>
         </div>
         <div class="footer__box footer__box--list">
@@ -194,6 +238,9 @@
                 </ul>
             </div>
         </div>
+        <p class="footer__copy">
+            Copyright 2019 MNTN, Inc. Terms & Privacy
+        </p>
     </footer>
 
     <!-- Popup -->
@@ -201,7 +248,7 @@
         <div class="popup__body">
             <div class="popup__content">
                 <button class="popup__close">x</button>
-                <form class="popup__form form" onsubmit="popupClose(); return false;">
+                <form class="popup__form form">
                     <div class="form__body">
                         <label for="userName" class="form__label"><b>Username</b></label>
                         <input type="text" class="form__input" placeholder="Enter Username" name="userName" required>
@@ -222,7 +269,6 @@
             </div>
             </form>
         </div>
-    </div>
     </div>
     <script src="js/main.js"></script>
 </body>
