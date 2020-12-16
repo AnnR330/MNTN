@@ -32,7 +32,7 @@
         <div class="slider">
             <div class="slider__wrapper">
                 <div class="slider__item">
-                    <img class="slider__img"
+                    <img class="slider__img" alt="slider-image"
                          srcset="img/slider-item1-400.jpg 400w,
                                 img/slider-item1-800.jpg 800w,
                                 img/slider-item1-1200.jpg 1200w"
@@ -56,7 +56,7 @@
                 </div>
 
                 <div class="slider__item">
-                    <img class="slider__img"
+                    <img class="slider__img" alt="slider-image"
                          srcset="img/slider-item2-400.jpg 400w,
                                 img/slider-item2-800.jpg 800w,
                                 img/slider-item2-1200.jpg 1200w"
@@ -80,7 +80,7 @@
                 </div>
 
                 <div class="slider__item">
-                    <img class="slider__img"
+                    <img class="slider__img" alt="slider-image"
                          srcset="img/slider-item3-400.jpg 400w,
                                 img/slider-item3-800.jpg 800w,
                                 img/slider-item3-1200.jpg 1200w"
@@ -136,7 +136,7 @@
                     </p>
                     <a href="#" class="box__link">read more</a>
                 </div>
-                <img class="box__img" 
+                <img class="box__img" alt="section-image"
                      srcset="img/item1-300.jpg 300w,
                             img/item1-400.jpg 400w, 
                             img/item1-566.jpg 566w"
@@ -146,7 +146,7 @@
                      src="img/item1-566.jpg"/>
             </section>
             <section class="box">
-                <img class="box__img" 
+                <img class="box__img" alt="section-image"
                      srcset="img/item2-300.jpg 300w,
                             img/item2-400.jpg 400w, 
                             img/item2-566.jpg 566w"
@@ -183,7 +183,7 @@
                     </p>
                     <a href="#" class="box__link">read more</a>
                 </div>
-                <img class="box__img" 
+                <img class="box__img" alt="section-image"
                      srcset="img/item3-300.jpg 300w,
                             img/item3-400.jpg 400w, 
                             img/item3-566.jpg 566w"
@@ -251,23 +251,23 @@
                 <form class="popup__form form">
                     <div class="form__body">
                         <label for="userName" class="form__label"><b>Username</b></label>
-                        <input type="text" class="form__input" placeholder="Enter Username" name="userName" required>
+                        <input type="text" class="form__input" placeholder="Enter Username" id="userName" required>
 
                         <label for="psw" class="form__label"><b>Password</b></label>
-                        <input type="password" class="form__input" placeholder="Enter Password" name="psw" required>
+                        <input type="password" class="form__input" placeholder="Enter Password" id="psw" required>
 
                         <button type="submit" class="form__btn form__btn--submit">Login</button>
 
-                        <label class="form__checkbox">
-                            <input type="checkbox" checked="checked" name="remember"> Remember me
+                        <label class="form__checkbox" for="remember">
+                            <input type="checkbox" checked="checked" id="remember"> Remember me
                         </label>
                     </div>
                     <div class="form__footer">
                         <button type="button" class="form__btn form__btn--cancel">Cancel</button>
                         <span class="form__link">Forgot <a href="#">password?</a></span>
                     </div>
+                </form>
             </div>
-            </form>
         </div>
     </div>
     <script src="js/main.js"></script>
