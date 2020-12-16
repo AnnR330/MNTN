@@ -1,7 +1,6 @@
 :root {
     --bg: #0B1D26;
     --accent: #FBD784;
-
     box-sizing: border-box;
 }
 
@@ -244,7 +243,8 @@ a {
     top: 0;
     right: -16px;
     background-image: url(../img/arrow-bottom.svg);
-    animation: move-bottom 2s ease-out infinite;
+    -webkit-animation: move-bottom 2s ease-out infinite;
+            animation: move-bottom 2s ease-out infinite;
 }
 
 .btn {
@@ -276,7 +276,9 @@ a {
 }
 
 .header__contacts-text {
-    writing-mode: vertical-lr;
+    -webkit-writing-mode: vertical-lr;
+        -ms-writing-mode: tb-lr;
+            writing-mode: vertical-lr;
 }
 
 .header__contacts-link {
@@ -342,7 +344,8 @@ a {
     width: 24px;
     height: 16px;
     background-image: url("../img/arrow-right.svg");
-    animation: move-right 2s ease-out infinite;
+    -webkit-animation: move-right 2s ease-out infinite;
+            animation: move-right 2s ease-out infinite;
 }
 
 .footer {
@@ -524,6 +527,18 @@ a {
     color: var(--accent);
 }
 
+@-webkit-keyframes move-bottom {
+    0% {
+        opacity: 0;
+        transform: translateY(-50%);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(25%);
+    }
+}
+
 @keyframes move-bottom {
     0% {
         opacity: 0;
@@ -533,6 +548,18 @@ a {
     100% {
         opacity: 1;
         transform: translateY(25%);
+    }
+}
+
+@-webkit-keyframes move-right {
+    0% {
+        opacity: 0;
+        transform: translateX(-50%);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(25%);
     }
 }
 
@@ -551,11 +578,6 @@ a {
 @media screen and (max-width: 1350px) {
     .title {
         font-size: 60px;
-    }
-
-    .headline {
-        letter-spacing: 2px;
-        font-size: 16px;
     }
 
     .box__title {
@@ -725,7 +747,9 @@ a {
     }
 
     .header__contacts-text {
-        writing-mode: initial;
+        -webkit-writing-mode: initial;
+            -ms-writing-mode: initial;
+                writing-mode: initial;
     }
 
     .header__contacts-link {
@@ -787,6 +811,9 @@ a {
 }
 
 @media screen and (max-width: 480px){
+    body{
+        font-size: 16px;
+    }
     .logo{
         font-size: 24px;
     }
@@ -807,26 +834,7 @@ a {
         font-size: 28px;
     }
     .headline{
-        font-size: 14px;
         letter-spacing: 1px;
-    }
-    .header__contacts-text{
-        font-size: 14px;
-    }
-    .slider__scroll{
-        font-size: 14px;
-    }
-    .box__text{
-        font-size: 16px;
-    }
-    .box__link{
-        font-size: 16px;
-    }
-    .footer__text{
-        font-size: 16px;
-    }
-    .footer__copy{
-        font-size: 14px;
     }
     .form__body{
         padding: 0 10px;
